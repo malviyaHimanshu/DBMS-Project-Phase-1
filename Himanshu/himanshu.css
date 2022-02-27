@@ -61,7 +61,7 @@ body {
     margin-top: 40px;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: fit-content;
     max-height: 40px;
     opacity: 0;
     animation: fade 1s ease 6s forwards;
@@ -146,9 +146,6 @@ body {
     position: relative;
 }
 
-
-
-
 .skills {
     margin: 30px 0 0 0;
     font-family: 'Poppins', 'Major Mono Display';
@@ -177,4 +174,28 @@ body {
     background-color: var(--accent-color);
     color: black;
     border: solid var(--accent-color) 1.5px;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        display: grid;
+    }
+    .profile-photo {
+        grid-row-start: 1;
+        margin: 3rem auto;
+    }
+    .profile-photo img {
+        width: 300px;
+        border: solid var(--accent-color) 5px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .content {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .social-links {
+        margin: 40px auto;
+    }
 }
