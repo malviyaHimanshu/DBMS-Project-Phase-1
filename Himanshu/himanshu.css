@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=JetBrains+Mono:wght@100&family=Major+Mono+Display&family=Poppins:wght@200&display=swap');
+
+:root {
+    --background-color: black;
+    --typewriter-char: 14;
+    --accent-color: rgb(88, 238, 96);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    background-color: var(--background-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.content {
+    width: 50%;
+}
+
+.heading {
+    width: max-content;
+    margin-bottom: 15px;
+}
+.heading h1 {
+    font-size: 50px;
+    /* border: solid white; */
+    font-family: 'Poppins', 'Major Mono Display';
+    font-weight: normal;
+}
+.heading p {
+    font-size: 40px;
+    /* border: solid salmon; */
+}
+.heading p #colored {
+    color: var(--accent-color);
+}
+
+.subtitle p {
+    font-size: 22px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeup 1.5s ease 4.5s forwards;
+}
+
+.some-text {
+    font-size: 18px;
+    font-family: 'Poppins';
+    margin-top: 30px;
+    opacity: 0;
+    animation: fade 1s ease 6s forwards;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    max-height: 40px;
+    opacity: 0;
+    animation: fade 1s ease 6s forwards;
+}
+
+.social-links div {
+    margin: 0 40px 0 0;
+}
+
+.social-links .linkedin,
+.social-links .twitter {
+    filter: invert(1);
+}
+.logo {
+    width: 30px;
+    transition: width 0.2s ease;
+}
+.social-links .twitter img {
+    transform: translateY(4px);
+    width: 35px;
+}
+.twitter img:hover {
+    width: 40px;
+}
+.logo:hover {
+    width: 35px;
+}
+
+.typewriter {
+    position: relative;
+}
+.typewriter::before,
+.typewriter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.typewriter::before {
+    background-color: var(--background-color);
+    animation: typewriter-animation 3s steps(var(--typewriter-char)) 1s forwards;
+}
+.typewriter::after {
+    border-left: solid white 2px;
+    opacity: 1;
+    animation: cursor-blink 0.75s steps(var(--typewriter-char)) infinite, typewriter-animation 3s steps(var(--typewriter-char)) 1s forwards;
+}
+
+@keyframes typewriter-animation {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes cursor-blink {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeup {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
+
+.profile-photo {
+    width: fit-content;
+}
+.profile-photo img {
+    width: 400px;
+    border: solid var(--accent-color) 5px;
+    border-radius: 50%;
+    position: relative;
+}

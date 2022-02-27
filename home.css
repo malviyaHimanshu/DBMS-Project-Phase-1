@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+    --color1: #2b2d42;
+    --color2: #8d99ae;
+    --color3: #edf2f4;
+    --color4: #ef233c;
+    --color5: #d90429;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 15vh;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px 50px;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.glow::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%; 
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    z-index: -1;
+    border-radius: 20px;
+    animation: border-gradient 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.glow:hover::after {
+    opacity: 1;
+}
+
+@keyframes border-gradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow::after {
+    filter: blur(7rem);
+}
+
+
+.block {
+    position: relative;
+    background: linear-gradient(0deg, black, rgb(59, 59, 59));
+    height: 400px;
+    width: 300px;
+    border-radius: 17px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.575), rgba(59, 59, 59, 0.233));
+    border: solid rgba(116, 116, 116, 0.582) 1px;
+}
+
+
+.block .profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(163, 163, 163);
+    /* background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff); */
+    /* background-size: 400%;  */
+    backdrop-filter: blur(1rem);
+    transform: translateY(50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: border-gradient 20s linear infinite; */
+}
+
+.profile img {
+    display: block;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 100px;
+    text-align: center;
+}
+.name p {
+    margin: 3px;
+    font-size: 20px;
+    color: rgba(177, 177, 177, 0.788);
+}
