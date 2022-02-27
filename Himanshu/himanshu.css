@@ -23,7 +23,7 @@ body {
 }
 
 .content {
-    width: 50%;
+    width: 45%;
 }
 
 .heading {
@@ -32,13 +32,11 @@ body {
 }
 .heading h1 {
     font-size: 50px;
-    /* border: solid white; */
     font-family: 'Poppins', 'Major Mono Display';
     font-weight: normal;
 }
 .heading p {
     font-size: 40px;
-    /* border: solid salmon; */
 }
 .heading p #colored {
     color: var(--accent-color);
@@ -146,4 +144,37 @@ body {
     border: solid var(--accent-color) 5px;
     border-radius: 50%;
     position: relative;
+}
+
+
+
+
+.skills {
+    margin: 30px 0 0 0;
+    font-family: 'Poppins', 'Major Mono Display';
+    opacity: 0;
+    animation: fade 1s ease 6s forwards;
+}
+.skills p {
+    font-size: 30px;
+    text-decoration: underline;
+}
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills ul li {
+    font-size: 12px;
+    list-style: none;
+    padding: 5px 15px;
+    margin: 5px 10px 5px 0;
+    border: solid white 1.5px;
+    border-radius: 2rem;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+.skills ul li:hover {
+    background-color: var(--accent-color);
+    color: black;
+    border: solid var(--accent-color) 1.5px;
 }
