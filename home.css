@@ -99,15 +99,12 @@ nav {
     width: 150px;
     border-radius: 50%;
     background-color: rgb(163, 163, 163);
-    /* background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff); */
-    /* background-size: 400%;  */
     backdrop-filter: blur(1rem);
     transform: translateY(50%);
 
     display: flex;
     align-items: center;
     justify-content: center;
-    /* animation: border-gradient 20s linear infinite; */
 }
 
 .profile img {
